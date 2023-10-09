@@ -16,9 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-
-      - name: deepen git history
-        run: git fetch --shallow-exclude ${{ github.event.pull_request.base.sha }}
+        with:
+          fetch-depth: 2
 
       - name: detect changed files
         run: |
