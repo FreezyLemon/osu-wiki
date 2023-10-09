@@ -21,3 +21,7 @@ jobs:
           path: node_modules
           key: node-modules-${{ hashFiles('package.json', 'package-lock.json') }}-${{ steps.setup-node.outputs.node-version }}
           lookup-only: true
+
+      - name: 'if cache outdated: install node_modules'
+        if: steps.cache-node-modules.outputs.cache-hit != 'true'
+        run: npm ci
