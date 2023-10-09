@@ -1,4 +1,4 @@
-name: osu-wiki continuous integration
+name: refresh node_modules cache
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   cache-node-modules:
-    name: refresh node_modules cache
+    name: update cache
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
