@@ -24,16 +24,6 @@ outdated: true
 
 Kamu juga bisa mengikuti apa yang kami jelaskan di atas dari [beatmap ini](https://osu.ppy.sh/beatmapsets/924551/discussion) untuk lebih familiar dengan diskusi beatmap atau coba buka laman diskusi kamu sendiri.
 
-## Panduan
-
-Penting untuk diperhatikan bagaimana menggunakan laman diskusi beatmap secara efektif:
-
-- Pilih mode yang tepat dan tingkat kesulitan yang ingin kamu mod.
-- Pilih bagian yang tepat untuk kirim mod.
-- **Hanya posting satu masalah dalam satu waktu.** Jangan kirim banyak masalah dalam satu posting.
-- Periksa untuk melihat apakah masalah telah diatasi ketika peringatan posting serupa muncul.
-- Jika kamu menyukai beatmapnya, pertimbangkan untuk meng-hype beatmap tersebut untuk lebih cepat dinominasi.
-
 ## Pemilihan mode
 
 ![](img/mode-selection-ID.jpg "Pemilihan mode")
