@@ -6,12 +6,6 @@ En el menú principal, haga clic en `Opciones` o presione `O` (o presione `Ctrl`
 
 Cuando se cambia una configuración que tiene un valor predeterminado, la barra vertical gris de la izquierda se iluminará en amarillo para esa configuración. Al hacer clic en esto, se restablecerá el valor a su valor predeterminado.
 
-## General
-
-![Icono de General](img/general-ES.png "Icono de General")
-
-Esta sección trata sobre su cuenta, configuración de idioma, y actualizaciones para osu!
-
 ### Iniciar sesión
 
 Si no ha iniciado sesión en el cliente del juego, se abrirá automáticamente el menú de opciones al inicio y se le pedirá que inicie sesión. Puede ignorar esto presionando `Esc`, haciendo clic en el botón atrás, o navegando a la pantalla de selección de canciones. Si no inicia sesión, el cliente del juego lo marcará como «Guest» y no podrá obtener puntuaciones en línea, enviar puntuaciones ni jugar [multijugador](/wiki/Client/Interface/Multiplayer).
