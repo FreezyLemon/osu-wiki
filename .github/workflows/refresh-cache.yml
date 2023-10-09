@@ -12,16 +12,22 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          sparse-checkout: '' # top-level dir included by default
+          sparse-checkout: '.'
 
       - name: check node_modules cache
         id: cache-node-modules
-        uses: actions/cache@v3
+        uses: actions/cache/restore@v3
         with:
-          path: node_modules
-          key: node-modules-${{ hashFiles('package.json', 'package-lock.json') }}-${{ steps.setup-node.outputs.node-version }}
           lookup-only: true
+          key: node-modules-${{ hashFiles('package.json', 'package-lock.json') }}-${{ steps.setup-node.outputs.node-version }}
 
       - name: 'if cache outdated: install node_modules'
         if: steps.cache-node-modules.outputs.cache-hit != 'true'
         run: npm ci
+
+      - name: 'if cache outdated: save cache'
+        if: steps.cache-node-modules.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v3
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('package.json', 'package-lock.json') }}-${{ steps.setup-node.outputs.node-version }}
