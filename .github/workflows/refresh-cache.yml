@@ -1,0 +1,23 @@
+name: osu-wiki continuous integration
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  cache-node-modules:
+    name: refresh node_modules cache
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          sparse-checkout: '' # top-level dir included by default
+
+      - name: check node_modules cache
+        id: cache-node-modules
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('package.json', 'package-lock.json') }}-${{ steps.setup-node.outputs.node-version }}
+          lookup-only: true
