@@ -18,29 +18,6 @@ Dieser Artikel listet die verschiedenen Tipps auf, die im Spiel vorkommen und n�
 
 Diese Tipps erscheinen am unteren Rand des [Hauptmenüs](/wiki/Client/Interface#hauptmenü).
 
-- Du kannst neue [Beatmaps](/wiki/Beatmap) importieren, indem du die [.osz-Datei](/wiki/Client/File_formats/osz_(file_format)) in das Fenster ziehst, im Explorerfenster doppelklickst oder direkt vom Browser aus von osu! öffnen lässt.
-- Du kannst auch durch große Listen von Beatmaps einfach und schnell navigieren, indem du sie mit gedrückter linker Maustaste verschiebst oder mit der rechten Maustaste an einen bestimmten Punkt in der Liste springst.
-- Du kannst überall in osu! `F8` oder `F9` drücken, um den [Chat](/wiki/Client/Interface/Chat_console) zu öffnen.
-- Ein Rechtsklick auf die Beatmap oder ein Klick auf die `Beatmap-Optionen` öffnet ein Menü, mit dem du deine Beatmaps organisieren kannst.
-- Wenn du das Gefühl hast, dass das Spiel oder der Mauszeiger [nicht schnell genug](/wiki/Performance_troubleshooting) auf deine Eingaben reagieren, stelle in den Optionen ein höheres FPS-Limit ein. Das könnte helfen.
-- In schnellen Liedern kannst du beide Maustasten abwechselnd verwenden oder auf die Tastatur wechseln.
-- Wenn du Probleme damit hast, Videos abzuspielen, informiere dich bitte erst im Wiki, bevor du einen Bug-Report postest.
-- Du kannst überall in osu! einen Screenshot aufnehmen, indem du `F12` drückst.
-- Du kannst anderen beim Spielen zusehen, indem du den [Zuschauermodus](/wiki/Gameplay/Spectating) nutzt. Drücke `F9` für die erweiterte Chat-Anzeige und probiere es aus!
-- Wenn eine neue Version einer Beatmap verfügbar ist, wird an Stelle der Online-Rangliste ein Update-Knopf angezeigt, mit dem du die neueste Version herunterladen kannst.
-- Das Wiki beinhaltet viele nützliche Informationen. [Schau doch mal rein!](/wiki/Main_page)
-- Wusstest du, dass du neue Beatmaps ganz einfach importieren kannst, indem du die Datei doppelklickst oder ins osu!-Fenster ziehst?
-- Auf der [Punkteübersicht](/wiki/Client/Interface#ergebnisanzeige) kannst du mit `F2` ein [Replay](/wiki/Gameplay/Replay) speichern, egal ob du online oder offline gespielt hast.
-- Wenn du das Gefühl hast, dass die Beats in jeder Beatmap zu früh oder zu spät kommen, solltest du versuchen, in den `Optionen` das `universelle Audio-Offset` anzupassen.
-- Du kannst eine Beatmap am schnellsten wiederfinden, indem du in der [Songauswahl](/wiki/Client/Interface#songauswahl) den Interpreten, den Titel oder den Ersteller der Beatmap eintippst.
-- Der Chat kann automatisch während des Spielens geschlossen werden. Wähle dafür den Schalter in der unteren rechten Ecke, wenn der Chat geöffnet ist.
-- Im Spiel kannst du mit dem Mausrad die Lautstärke anpassen. Wenn du das nicht willst, kannst du dies in den Optionen deaktivieren.
-- Mit der mittleren Maustaste kannst du ein Lied schnell pausieren oder weitermachen. Wenn du das nicht willst, kannst du dies in den Optionen deaktivieren.
-- Über der [Rangliste](/wiki/Client/Interface#rangliste) ist ein Knopf mit einer Sprechblase, mit dem du Schnellzugriff auf diverse Weblinks dieser Beatmap hast.
-- Passe dein osu! Erlebnis mit neuen [Skins](/wiki/Skin) an! Lade sie vom [Skinning Forum](https://osu.ppy.sh/community/forums/15) herunter.
-- Du kannst überall `F8` drücken, um den In-Game-Chat zu öffnen. Tippe `!help` oder `/help` ein, um eine Übersicht über die [verfügbaren Befehle](/wiki/Client/Interface/Chat_console#liste-an-chatbefehlen) zu erhalten.
-- Lege hin und wieder mal eine Pause ein und gönne deinen Augen und Händen eine Pause. Du könntest sie noch brauchen.
-- Ignoriere [nicht gerankte](/wiki/Beatmap/Category) Maps nicht einfach. Wenn du welche findest, die du magst, und [Verbesserungsvorschläge hinterlässt](/wiki/Modding), erhöhst du die Wahrscheinlichkeit, dass sie [gerankt](/wiki/Beatmap_ranking_procedure) wird!
 - Im [Multiplayer-Modus](/wiki/Client/Interface/Multiplayer) kannst du zusammen mit anderen spielen!
 - Hast du dich schon mal gefragt, woher die ganzen Spieler kommen? Drücke `F9` und bewege die Maus über ihr User-Panel!
 - Drücke `F5` in der Songauswahl, um neue Lieder in deinem Songs-Ordner zu importieren.
