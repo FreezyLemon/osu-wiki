@@ -19,19 +19,6 @@ Your new song will be available at the bottom of the song list, highlighted in p
 If it is not listed in the song selection for any reason, press `F5` to reset the beatmap cache and it should appear.
 Click on the song, this will open the [beatmap editor](/wiki/Client/Beatmap_editor) and the `Song Setup` dialog.
 
-### Song Setup
-
-*Main page: [Song Setup](/wiki/Client/Beatmap_editor/Song_setup)*
-
-When making a new [beatmap](/wiki/Beatmap), you will always see this dialog before any other parts of the beatmap editor.
-
-You should fill out this information before creating another [difficulty](/wiki/Beatmap/Difficulty).
-This will ensure that the metadata will be consistent across all of the difficulties in the set.
-
-You can change the options in the other tabs now if you want, but they can be changed later on.
-Click `OK`, and you can start beatmapping!
-The next step is to add timing to your beatmap.
-
 ### Timing
 
 *Main page: [Timing](/wiki/Client/Beatmap_editor/Timing)*
