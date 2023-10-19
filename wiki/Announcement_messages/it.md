@@ -22,7 +22,7 @@ Un **messaggio di annuncio** è un tipo speciale di messaggio utilizzato con lo 
 - Possibilità di bypassare l'impostazione `blocca messaggi privati da chi non è nella tua lista amici`
 - Solo gli utenti che possono inviare messaggi di annuncio possono rispondere a questi
 
-### Presentare una richiesta
+## Presentare una richiesta
 
 Puoi presentare una richiesta per entrare nel gruppo di utenti per gli annunci inviando un'email a [accounts@ppy.sh](mailto:accounts@ppy.sh) con l'oggetto `Announce Usergroup Request`. Questa dev'essere inviata dall'indirizzo email collegato al tuo account osu!.
 

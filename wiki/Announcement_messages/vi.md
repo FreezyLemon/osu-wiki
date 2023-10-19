@@ -21,7 +21,7 @@ Một **tin nhắn thông báo** là một loại tin nhắn đặc biệt đư�
 - Có thể vượt qua cài  `chặn tin nhắn riêng tư từ những người không có trên danh sách bạn bè của bạn.`
 - Chỉ có những người có thể gửi tin nhắn thông báo có thể trả lời được chúng
 
-### Điền một yêu cầu
+## Điền một yêu cầu
 
 Bạn có thể điền một yêu cầu để tham gia nhóm thông báo người dùng bằng cách gửi một email đến [accounts@ppy.sh](mailto:accounts@ppy.sh) với chủ để `Yêu cầu nhóm thông báo người dùng`. Cái này cần phải được gửi từ địa chỉ email được gắn với tài khoản osu! của bạn.
 
