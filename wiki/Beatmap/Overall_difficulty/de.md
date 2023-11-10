@@ -8,19 +8,19 @@ tags:
 
 # Overall Difficulty
 
-*Für empfohlene OD-Werte, siehe: [Ranking-Kriterien]*
+*Für empfohlene OD-Werte, siehe: [Ranking-Kriterien](/wiki/Ranking_criteria)*
 
-Die **Overall Difficulty** (***OD***) bestimmt, wie schwer eine hohe [Genauigkeit] in einer [Beatmap] erreichbar ist. Der OD-Wert reicht von 0 bis 10 und je höher der Wert, desto mehr Genauigkeit ist notwendig. <!-- last sentence: MEH --> Da eine hohe Genauigkeit auch für das Erhalten von [Gesundheit] wichtig ist, macht es eine höhere OD auch schwieriger, eine Beatmap erfolgreich durchzuspielen.
+Die **Overall Difficulty** (***OD***) bestimmt, wie schwer eine hohe [Genauigkeit](/wiki/Gameplay/Accuracy) in einer [Beatmap](/wiki/Beatmap) erspielbar ist. Der OD-Wert liegt zwischen 0 und 10, und ein höherer Wert bedeutet, dass mehr Genauigkeit und Präzision erforderlich sind. Da eine hohe Genauigkeit auch für das Erhalten von [Gesundheit](/wiki/Gameplay/Health) wichtig ist, wird es durch eine höhere OD schwieriger, eine Beatmap erfolgreich zu beenden.
 
 ## Timing
 
-Ein höherer OD-Wert bedeutet, dass das Zeitfenster zum Anklicken eines [Hit-Objektes] insgesamt und zum Erreichen hoher [Punktzahlen] kleiner wird. Die maximal erlaubte zeitliche Abweichung vom korrekten Zeitpunkt eines Hit-Objekts in den Spielmodi [osu!] und [osu!mania] wird in den folgenden Tabellen definiert.
+Ein höherer OD-Wert führt dazu, dass die Zeitfenster sowohl zum Anklicken eines [Hit-Objektes](/wiki/Gameplay/Hit_object) überhaupt als auch zum Erreichen hoher [Punktzahlen](/wiki/Gameplay/Score) kleiner werden. Die maximal erlaubte zeitliche Abweichung vom korrekten Zeitpunkt eines Hit-Objektes in den Spielmodi [osu!](/wiki/Game_mode/osu!) und [osu!mania](/wiki/Game_mode/osu!mania) wird in den folgenden Tabellen definiert.
 
-Man beachte, dass diese Zeitfenster in der stable-Version von osu! in den Modi osu! und [osu!taiko] bis zu 0.5 ms kleiner sein können als in den Formeln angegeben. In osu!mania kann das Zeitfenster bis zu 0.5 ms größer sein. Dies liegt an technischen Unterschieden zwischen den Spielmodi; in osu! und osu!taiko ist ein Klick gültig, solange `hit error < round(hit window)` gilt, während die Voraussetzung in osu!mania `hit error <= round(hit window)` ist.[^judgement-rounding-ref]
+Man beachte, dass diese Zeitfenster in der stable-Version von osu! in den Spielmodi osu! und [osu!taiko](/wiki/Game_mode/osu!taiko) am Anfang und Ende jeweils bis zu 0.5 ms kürzer sein können als in den Formeln angegeben. In osu!mania kann das Zeitfenster am Anfang und Ende jeweils bis zu 0.5 ms größer sein. Dies liegt an technischen Unterschieden zwischen den Spielmodi; in osu! und osu!taiko ist ein Klick gültig, solange `abweichung < gerundet(zeitfenster)` gilt, während die Voraussetzung in osu!mania `abweichung <= gerundet(zeitfenster)` ist.[^judgement-rounding-ref]
 
-Zum Beispiel ist das Zeitfenster für ein "Great" in osu!taiko bei einem OD-Wert von 5 (kurz: OD 5) ±34.5 ms statt des Tabellenwertes ±35 ms. In osu!mania ist das Zeitfenster für ein "MAX" ±16.5 ms, nicht ±16 ms.
+Zum Beispiel ist das Zeitfenster für ein Great in osu!taiko bei einem OD-Wert von 5 (kurz: OD 5) ±34.5 ms statt des Tabellenwertes ±35 ms. In osu!mania ist das Zeitfenster für ein MAX ±16.5 ms, nicht ±16 ms.
 
-Die korrekten Zeitfenster für die Bewertung von Hit-Objekten können immer eingesehen werden, indem man mit dem Cursor über die [Beatmap-Informationen in der Songauswahl] fährt.
+Die korrekten Zeitfenster für die Bewertung von Hit-Objekten können immer eingesehen werden, indem man mit dem Cursor über die [Beatmap-Informationen in der Songauswahl](/wiki/Client/Interface#beatmap-informationen) fährt.
 
 ### osu!
 
@@ -30,7 +30,7 @@ Die korrekten Zeitfenster für die Bewertung von Hit-Objekten können immer eing
 | 100 | `140 - 8 * OD` |
 | 50 | `200 - 10 * OD` |
 
-![](/wiki/shared/ODTable.png "Vergleich der resultierenden Zeitfenster aus verschiedenen Kombinationen von OD-Werten und Spielmodifikationen. Für Kombinationen mit Half Time und Double Time gilt, dass die angezeigten OD-Werte nur für 300er-Bewertungen gültig sind und für 50er und 100er unterschiedlich wären.")
+![](/wiki/shared/ODTable.png "Vergleich von verschiedenen Kombinationen aus OD-Werten und Spielmodifikationen. Für Kombinationen mit Half Time und Double Time gilt, dass die angezeigten OD-Werte nur für 300er-Bewertungen gültig sind und für 50er und 100er unterschiedlich wären.")
 
 ### osu!taiko
 
@@ -50,38 +50,28 @@ Die korrekten Zeitfenster für die Bewertung von Hit-Objekten können immer eing
 | 100 | `127 - 3 * OD` |
 | 50 | `188 - 3 * OD` |
 
-Wenn der Spieler außerhalb des 50er-Zeitfensters klickt, wird es als Miss gezählt. Sollten sich die Zeitfenster von zwei Hit-Objekten überlappen, kann das zweite Hit-Objekt wegen [Notelock] nicht angeklickt werden, bis das erste verschwindet.
+Wenn der Spieler außerhalb des 50er-Zeitfensters klickt, wird das Objekt als Miss bewertet. Sollten sich die Zeitfenster von zwei Hit-Objekten überlappen, kann das zweite Hit-Objekt wegen [Notelock](/wiki/Gameplay/Judgement/Notelock) nicht angeklickt werden, bis das erste verschwindet.
 
-## Sliders und Spinner
+## Sliders und Spinners
 
-In [osu!] werden [Slider] mit einer 300 bewertet, solange sie im 50er-Zeitfenster angeklickt werden. Dieses Verhalten wird manchmal "Slider leniency" genannt und ist in [ScoreV2] nicht mehr vorhanden.
+In [osu!](/wiki/Game_mode/osu!) werden [Slider](/wiki/Gameplay/Hit_object/Slider) mit einer 300 bewertet, solange sie im 50er-Zeitfenster angeklickt werden. Dieses Verhalten wird manchmal "Slider leniency" genannt und wurde in [ScoreV2](/wiki/Gameplay/Game_modifier/ScoreV2) entfernt.
 
-Die Overall Difficulty wirkt sich auch auf [Spinner] aus. Ein höherer OD-Wert führt dazu, dass ein Spinner häufiger gedreht werden muss, um gefüllt zu werden. In [osu!taiko] benötigt das denden außerdem mehr Schläge, um bestanden zu werden <!-- TODO: double-check this entire sentence, hard --> Die Umdrehungen, die pro Sekunde benötigt werden, um einen Spinner zu bestehen, lassen sich aus folgender Formel berechnen:
+Die Overall Difficulty wirkt sich auch auf [Spinner](/wiki/Gameplay/Hit_object/Spinner) aus. Ein höherer OD-Wert führt dazu, dass ein Spinner häufiger gedreht werden muss. In [osu!taiko](/wiki/Game_mode/osu!taiko) benötigt das denden bei einem höheren OD-Wert mehr Schläge <!-- TODO: double-check the preceding sentence --> Die pro Sekunde benötigten Umdrehungen lassen sich durch die folgende Formel berechnen:
 
 - OD < 5: `5 - 2 * (5 - OD) / 5`
 - OD = 5: `5`
 - OD > 5: `5 + 2.5 * (OD - 5) / 5`
 
-## Mod-Effekte
+## Auswirkungen von Mods auf die OD
 
-Es gibt vier [Mods], die sich auf die OD auswirken:
+Es gibt vier [Mods](/wiki/Gameplay/Game_modifier), die sich auf die OD auswirken:
 
-- [Easy] halbiert den OD-Wert.
-- [Hard Rock] multipliziert den OD-Wert um 1.4, auf maximal 10.
-- [Double Time] ändert den OD-Wert nicht. Da die Spielgeschwindigkeit um 50% erhöht wird, sind alle Zeitfenster aber um 33% kleiner.
-- [Half Time] ändert den OD-Wert nicht. Da die Spielgeschwindigkeit um 25% verringert wird, sind alle Zeitfenster aber um 33% größer.
+- [Easy](/wiki/Gameplay/Game_modifier/Easy) halbiert den OD-Wert.
+- [Hard Rock](/wiki/Gameplay/Game_modifier/Hard_Rock) multipliziert den OD-Wert mit 1.4 bis maximal 10.
+- [Double Time](/wiki/Gameplay/Game_modifier/Double_Time) ändert den OD-Wert nicht. Da die Spielgeschwindigkeit um 50% erhöht wird, sind alle Zeitfenster aber um 33% kleiner.
+- [Half Time](/wiki/Gameplay/Game_modifier/Half_Time) ändert den OD-Wert nicht. Da die Spielgeschwindigkeit um 25% verringert wird, sind alle Zeitfenster aber um 33% größer.
 
-Half Time und Double Time ändern zwar nicht den OD-Wert, aufgrund der Geschwindigkeitsänderung wirken sie sich aber auf die Zeitfenster aus. Da die Skalierung der Zeitfenster mit dem OD-Wert für jede Bewertung (50, 100, 300) unterschiedlich ist, führt DT zu kleineren Zeitfenstern für 50 und 100 als üblich. HT führt zu größeren Zeitfenstern als üblich.
-
-
-There are four [mods](/wiki/Gameplay/Game_modifier) that alter the overall difficulty when activated:
-
-- [Easy](/wiki/Gameplay/Game_modifier/Easy): Halves the OD value.
-- [Hard Rock](/wiki/Gameplay/Game_modifier/Hard_Rock): Multiplies the OD value by 1.4, up to a maximum of 10.
-- [Double Time](/wiki/Gameplay/Game_modifier/Double_Time): The OD value is not affected, but due to the 50% play speed increase, hit windows are 33% shorter.
-- [Half Time](/wiki/Gameplay/Game_modifier/Half_Time): The OD value is not affected, but due to the 25% play speed decrease, hit windows are 33% larger.
-
-While Half Time and Double Time do not change the OD value, the speed difference leads to a change in the hit windows. Because the scaling is different for each score value, DT causes the windows for 100 and 50 to become tighter than usual compared to 300, and HT causes them to become more lenient.
+Half Time und Double Time ändern zwar nicht den OD-Wert, aufgrund der Geschwindigkeitsänderung wirken sie sich aber auf die Zeitfenster aus. Da die Skalierung der Zeitfenster mit dem OD-Wert für jede Bewertung (50, 100, 300) unterschiedlich ist, führt DT für die Bewertungen 50 und 100 zu unerwartet kleinen (strengen) Zeitfenstern, während HT zu unerwartet großen (einfachen) Zeitfenstern führt.
 
 ## osu!catch
 
@@ -89,85 +79,4 @@ Der OD-Wert ist in den Beatmap-Informationen sichtbar, hat aber keine Auswirkung
 
 ## Anmerkungen
 
-[^judgement-rounding-ref]: [Discord-Nachricht von spaceman_atlas (2022-05-06) in #osu-wiki in osu!dev](https://discord.com/channels/188630481301012481/218677502141399041/972241866382798889)
-
-
-
-
-
-*For recommended OD values, see: [Ranking criteria](/wiki/Ranking_criteria)*
-
-**Overall difficulty** (***OD***) defines how difficult it is to achieve high [accuracy](/wiki/Gameplay/Accuracy) on a [beatmap](/wiki/Beatmap). The value ranges from 0 to 10, where higher OD will require more accuracy and precision. Since accuracy is important for gaining [health](/wiki/Gameplay/Health), overall difficulty also influences how hard it is to pass a beatmap.
-
-## Timing
-
-Higher OD values mean shorter time windows to clear [hit objects](/wiki/Gameplay/Hit_object), both in general and in terms of getting high [score](/wiki/Gameplay/Score) values. The maximum allowed hit error for each hit object in [osu!](/wiki/Game_mode/osu!) and [osu!mania](/wiki/Game_mode/osu!mania), centred on the hit object's correct time, is defined by the tables below.
-
-Note that in the stable version of osu!, hit windows in osu! and [osu!taiko](/wiki/Game_mode/osu!taiko) can effectively be up to 0.5 ms shorter on both sides than what the formulas suggest, and in osu!mania they can be up to 0.5 ms longer on both sides. This is because in osu! and osu!taiko, a hit is considered inside a hit window if `hit error < round(hit window)`, while in osu!mania it is considered inside if `hit error <= round(hit window)`.[^judgement-rounding-ref]
-
-For example, the hit window of a Great in osu!taiko at OD 5 is ±34.5 ms, instead of the ±35 ms the table gives. In osu!mania, the hit window of a MAX is ±16.5 ms, not ±16 ms as the table suggests.
-
-Hit windows for judgments can be viewed when hovering over the [beatmap information in song select](/wiki/Client/Interface#beatmap-information), which will always show the correct values.
-
-### osu!
-
-| Score | Hit window (ms) |
-| --: | :-- |
-| 300 | `80 - 6 * OD` |
-| 100 | `140 - 8 * OD` |
-| 50 | `200 - 10 * OD` |
-
-![](/wiki/shared/ODTable.png "Comparison of hit windows for different combinations of OD and game modifiers. For Half Time and Double Time combinations, the shown OD values are only valid for the hit windows of 300s, and would be different for 100s and 50s.")
-
-### osu!taiko
-
-<!-- reference: https://github.com/ppy/osu/blob/master/osu.Game.Rulesets.Taiko/Scoring/TaikoHitWindows.cs#L12-L14
-and https://github.com/ppy/osu/blob/master/osu.Game/Beatmaps/IBeatmapDifficultyInfo.cs#L56-L61
-the same formula is used in stable -->
-
-| Score | Hit window (ms) |
-| --: | :-- |
-| Great |  `35 - (35 - 50) * (5 - OD) / 5` if OD < 5, `35 + (20 - 35) * (OD - 5) / 5` if OD > 5, otherwise `35` |
-| Ok | `80 - (80 - 120) * (5 - OD) / 5` if OD < 5, `80 + (50 - 80) * (OD - 5) / 5` if OD > 5, otherwise `80` |
-| Miss | `95 - (95 - 135) * (5 - OD) / 5` if OD < 5, `95 + (70 - 95) * (OD - 5) / 5` if OD > 5, otherwise `95` |
-
-### osu!mania
-
-| Score | Hit window (ms) |
-| --: | :-- |
-| MAX | `16` |
-| 300 | `64 - 3 * OD` |
-| 200 | `97 - 3 * OD` |
-| 100 | `127 - 3 * OD` |
-| 50 | `188 - 3 * OD` |
-
-If the player hits outside of the 50's hit window, it will count as a miss. In case the hit windows of two objects overlap, the second object will be inaccessible until the first object disappears due to [notelock](/wiki/Gameplay/Judgement/Notelock).
-
-## Sliders and spinners
-
-In [osu!](/wiki/Game_mode/osu!), [sliders](/wiki/Gameplay/Hit_object/Slider) will reward a 300 as long as they are hit within the 50's hit window. This is sometimes called slider leniency and is removed in [ScoreV2](/wiki/Gameplay/Game_modifier/ScoreV2).
-
-Overall difficulty also affects [spinners](/wiki/Gameplay/Hit_object/Spinner), in that they must be spun more to fill up the gauge in time. In [osu!taiko](/wiki/Game_mode/osu!taiko), the denden will also need more hits to be cleared. The spins per second required to clear a spinner is defined by the following formula:<!-- TODO: this is probably totally wrong with recent spinner changes -->
-
-- OD < 5: `5 - 2 * (5 - OD) / 5`
-- OD = 5: `5`
-- OD > 5: `5 + 2.5 * (OD - 5) / 5`
-
-## Mod effects
-
-There are four [mods](/wiki/Gameplay/Game_modifier) that alter the overall difficulty when activated:
-
-- [Easy](/wiki/Gameplay/Game_modifier/Easy): Halves the OD value.
-- [Hard Rock](/wiki/Gameplay/Game_modifier/Hard_Rock): Multiplies the OD value by 1.4, up to a maximum of 10.
-- [Double Time](/wiki/Gameplay/Game_modifier/Double_Time): The OD value is not affected, but due to the 50% play speed increase, hit windows are 33% shorter.
-- [Half Time](/wiki/Gameplay/Game_modifier/Half_Time): The OD value is not affected, but due to the 25% play speed decrease, hit windows are 33% larger.
-
-While Half Time and Double Time do not change the OD value, the speed difference leads to a change in the hit windows. Because the scaling is different for each score value, DT causes the windows for 100 and 50 to become tighter than usual compared to 300, and HT causes them to become more lenient.
-
-## osu!catch
-
-Overall difficulty is visible when viewing beatmap information, but it does not affect gameplay.
-
-## References
-
-[^judgement-rounding-ref]: [Discord message by spaceman_atlas (2022-05-06) in #osu-wiki in osu!dev](https://discord.com/channels/188630481301012481/218677502141399041/972241866382798889)
+[^judgement-rounding-ref]: [Discord-Nachricht von spaceman_atlas (2022-05-06) in #osu-wiki im osu!-Discordserver](https://discord.com/channels/188630481301012481/218677502141399041/972241866382798889)
