@@ -79,7 +79,7 @@ ffmpeg -i input -c:v libx264 -crf 20 -preset veryslow -vf scale=-1:720 -an -sn -
 - `-c:v libx264`: Specify that the video should be encoded using the x264 encoder, producing video in the H.264 format
 - `-crf 20`: The compression quality, where lower values give better quality at the expense of larger files and vice versa. The recommended range is around 20-25
 - `-preset veryslow`: Specify an encoding preset, with recommended values ranging from `ultrafast` to `veryslow`. Slower presets allow the encoder to give you higher quality for the same bit rate, or lower bit rate for the same quality. More information about available presets can be found on [FFmpeg's official website](https://trac.ffmpeg.org/wiki/Encode/H.264#Preset)
-- `-vf scale=-1:720`: Downscale the video to a height of 720 pixels. The `-1` lets FFmpeg automatically determine the width of the new video based on the aspect ratio of the source
+- `-vf scale=-1:720`: Downscale the video to a height of 720 pixels. The `-1` lets FFmpeg automatically determine the width of the new video based on the aspect ratio of the source. This option is not necessary if the original video is smaller than 1280x720
 - `-an -sn`: Remove audio and subtitles if present
 - `-map_metadata -1 -map_chapters -1`: Remove metadata and chapters if present
 - `output.mp4`: Your output file. If the file name contains spaces, wrap it in double quotes (`"`)
@@ -131,7 +131,7 @@ ffmpeg -i input -c:a libmp3lame -q:a 4 -vn -sn -map_metadata -1 -map_chapters -1
 
 - `-i input`: Your source file. If the file name contains spaces, wrap it in double quotes (`"`)
 - `-c:a libmp3lame`: Specify that the audio should be encoded using the LAME MP3 encoder
-- `-q:a 4`: Use the same variable bit rate range as in the Audacity example, **where a lower number means higher bit rate**.
+- `-q:a 4`: Use the same quality target as in the Audacity example, **where a lower number means higher bit rate**. Fractional values (like 3.5) are supported, and values from 2 to 5 are recommended
 - `-vn -sn`: Remove video and subtitles if present
 - `-map_metadata -1 -map_chapters -1`: Remove metadata and chapters if present
 - `output.mp3`: Your output file. If the file name contains spaces, wrap it in double quotes (`"`)
@@ -144,7 +144,7 @@ ffmpeg -i input -c:a libvorbis -q:a 5 -vn -sn -map_metadata -1 -map_chapters -1 
 
 - `-i input`: Your source file. If the file name contains spaces, wrap it in double quotes (`"`)
 - `-c:a libvorbis`: Specify that the audio should be encoded using the libvorbis encoder
-- `-q:a 5`: Use the same variable bit rate range as in the Audacity example, **where a higher number means higher bit rate**.
+- `-q:a 5`: Use the same quality target as in the Audacity example, **where a higher number means higher bit rate**. Fractional values (like 4.5) are supported, and values from 4 to 5 are recommended
 - `-vn -sn`: Remove video and subtitles if present
 - `-map_metadata -1 -map_chapters -1`: Remove metadata and chapters if present
 - `output.ogg`: Your output file. If the file name contains spaces, wrap it in double quotes (`"`)
