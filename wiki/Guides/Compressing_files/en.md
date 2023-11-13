@@ -11,7 +11,7 @@ There are 2 types of compression, **lossless** and **lossy**:
 - **Lossless** compression implies that the quality never degrades and can thus be repeatedly compressed and decompressed
 - **Lossy** compression uses certain powerful techniques to greatly reduce file size at the expense of quality
 
-The process of converting between audio and video formats, to reduce file size, average bit rate, or resolution, is called **re-encoding** or **transcoding**. Re-encoding an already lossy-compressed audio or video using lossy compression can result in varying degrees of further quality reduction, depending on the settings used.
+The process of converting between audio and video formats to reduce file size, average bit rate, or resolution is called **re-encoding** or **transcoding**. Re-encoding an already lossy-compressed audio or video using lossy compression can result in varying degrees of further quality reduction, depending on the settings used.
 
 Due to that reason, re-encoding should be avoided, except if the original audio or video file is any of the following:
 
@@ -82,7 +82,7 @@ ffmpeg -i input -c:v libx264 -crf 20 -preset veryslow -vf scale=-1:720 -an -sn -
 - `-vf scale=-1:720`: Downscale the video to a height of 720 pixels. The `-1` lets FFmpeg automatically determine the width of the new video based on the aspect ratio of the source
 - `-an -sn`: Remove audio and subtitles if present
 - `-map_metadata -1 -map_chapters -1`: Remove metadata and chapters if present
-- `output.mp4`: Your output file. If the file name contains spaces, wrap it around double quotes (`"`)
+- `output.mp4`: Your output file. If the file name contains spaces, wrap it in double quotes (`"`)
 
 ## Audio
 
